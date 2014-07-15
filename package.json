@@ -1,0 +1,10 @@
+{
+	"name": "TodoApp",
+	"version": "0.0.1",
+	"description": "todo list use angular.js and node.js",
+	"main": "server.js",
+	"dependencies": {
+		"express": "~3.4.4",
+		"mongoose": "~3.6.2"
+	}
+}

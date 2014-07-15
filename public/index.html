@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app="MyTodo">
+	<head>
+		<meta charset="utf-8">
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+		<script src="core.js"></script>
+	</head>
+
+	<body ng-controller="mainController">
+
+		<!-- header and todo count -->
+		<div>
+			{{todos.length}}
+		</div>
+
+		<!-- todo list -->
+		<div ng-repeat="todo in todos">
+			<label>
+				<input type="checkbox" ng-click="deleteTodo(todo._id)">{{todo.text}}
+			</label>
+		</div>
+
+		<!-- form to create todos -->
+		<!-- set "formData.text" to ng-model for formData is empty obj, add a field called text -->
+		<form>
+			<input type="text" ng-model="formData.text">
+			<button type="submit" ng-click="createTodo()">add item</button>
+		</form>
+
+
+	</body>
+
+
+</html>
